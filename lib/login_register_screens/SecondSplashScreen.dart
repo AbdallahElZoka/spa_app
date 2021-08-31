@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spa_app/login_register_screens/SecondSplashScreen.dart';
+import 'package:spa_app/login_register_screens/LoginScreen.dart';
 
-class SplashScreen extends StatelessWidget {
-  static final ROUTE_NAME = 'First Splash Screen';
+class SecondSplashScreen extends StatelessWidget {
+  static final ROUTE_NAME = 'Second Splash Screen';
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.fill,
-            image: const AssetImage('assets/images/splash_screen_bg.png'),
+            image: const AssetImage('assets/images/splash_screen_bg2.png'),
           ),
         ),
         child: Column(
@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                   top: 36,
                 ),
                 child: Text(
-                  'الكثير من المراكز',
+                  'الكثير من الخصومات بأنتظارك',
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xffFFFFFF),
@@ -67,28 +67,28 @@ class SplashScreen extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                    child: Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 22,
-                    vertical: 48,
-                  ),
-                  decoration: BoxDecoration(
-                      color: Color(0xffFFFFFF),
-                      borderRadius: BorderRadius.all(Radius.circular(26))),
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .pushNamed(SecondSplashScreen.ROUTE_NAME);
-                    },
-                    child: Text(
-                      'التالي',
-                      style: TextStyle(
-                        color: Color(0xff63805D),
-                        fontSize: 18,
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 22,
+                      vertical: 48,
+                    ),
+                    decoration: BoxDecoration(
+                        color: Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.all(Radius.circular(26))),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(LoginScreen.ROUTE_NAME);
+                      },
+                      child: Text(
+                        'إبدأ',
+                        style: TextStyle(
+                          color: Color(0xff63805D),
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ),
-                ))
+                )
               ],
             )
           ],
